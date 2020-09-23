@@ -87,6 +87,9 @@ const generateSnUser = () => {
     return snUser;
 }
 
+/* engine */
+app.set('engine', 'html');
+
 /* middlewares */
 app.use(express.static('./public'));
 
