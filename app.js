@@ -87,9 +87,6 @@ const generateSnUser = () => {
     return snUser;
 }
 
-/* engine */
-app.set('engine', 'html');
-
 /* middlewares */
 app.use(express.static('public'));
 
@@ -103,10 +100,6 @@ app.use((req, res, next) => {
 app.set('port', process.env.PORT | 3000);
 
 /* routes */
-app.get('/', async (req, res) => {
-    res.render('./public/index.html');
-});
-
 app.get('/api/v1/user', async (req, res) => {
     res.json(generateSnUser());
 });
