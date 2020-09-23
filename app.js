@@ -87,6 +87,10 @@ const generateSnUser = () => {
     return snUser;
 }
 
+/* middlewares */
+
+app.use(express.static('./public'));
+
 /* cors */
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -97,6 +101,10 @@ app.use((req, res, next) => {
 app.set('port', process.env.PORT | 3000);
 
 /* routes */
+app.get('/', async (req, res) => {
+    res.send('A')
+});
+
 app.get('/api/v1/user', async (req, res) => {
     res.json(generateSnUser());
 });
