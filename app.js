@@ -97,7 +97,7 @@ app.use((req, res, next) => {
 })
 
 /* port */
-app.set('port', process.env.PORT | 3000);
+app.set('port', process.env.PORT || 3000);
 
 /* routes */
 app.get('/api/v1/user', async (req, res) => {
