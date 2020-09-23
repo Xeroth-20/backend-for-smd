@@ -88,7 +88,6 @@ const generateSnUser = () => {
 }
 
 /* middlewares */
-
 app.use(express.static('./public'));
 
 /* cors */
