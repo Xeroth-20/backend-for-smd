@@ -91,7 +91,7 @@ const generateSnUser = () => {
 app.set('engine', 'html');
 
 /* middlewares */
-app.use(express.static('./public'));
+app.use(express.static('public'));
 
 /* cors */
 app.use((req, res, next) => {
